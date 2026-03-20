@@ -3,8 +3,8 @@
 ## Run
 
 ```bash
-docker build -t flask-app .
-docker run -d -p 5000:5000 --name flask-container flask-app
+docker build -t flask-app:v1 .
+docker run -d -p 5000:5000 flask-app:v1
 ```
 
 Access: http://localhost:5000
@@ -27,12 +27,12 @@ Access: http://localhost:5000
 * Used:
 
   * docker logs
-  * docker ps -a
+  * docker ps
   * docker exec
 
 ### Challenge 3 — Optimize
 
-* Used `python:3.9-slim`
+* Used `python:3.12-slim`
 * Added `.dockerignore`
 * Reduced image size
 
