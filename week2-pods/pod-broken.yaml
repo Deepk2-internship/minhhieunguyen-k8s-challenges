@@ -1,0 +1,10 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: broken-pod
+spec:
+  containers:
+    - name: broken-container
+      image: nginx:wrongtag   
+      ports:
+        - containerPort: 9999
